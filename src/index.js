@@ -1,12 +1,13 @@
-const path = require('path')
+const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
-const hbs = require('express-handlebars')
+const hbs = require('express-handlebars');
+const route = require('./Routes');
 
 const app = express();
 const port = 3000;
 //http logger
-app.use(morgan('combined'))
+//app.use(morgan('combined'))
 //Template engine
 
 app.engine('hbs', hbs.engine({
@@ -19,14 +20,14 @@ app.set('views', path.join(__dirname, 'resourses/views'));
 //static file
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/', (req, res) => {
-  res.render('home');
-});
+route(app);
 
-app.get('/news', (req, res) => {
-  res.render('news');
+/*
+app.post('/search', (req, res) => {
+  console.log(req.query);
+  res.render('search');
 });
-
+*/
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

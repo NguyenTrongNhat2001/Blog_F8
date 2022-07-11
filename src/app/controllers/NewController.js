@@ -1,14 +1,12 @@
-
-
 class NewController {
     //[GET] / news
-    index(req,res) {
+    index(req, res) {
         res.render('news');
     }
 
-    show(req,res) {
+    show(req, res) {
         res.send('NEW DETAILS');
     }
 }
 
-module.exports = new NewController;
+module.exports = new NewController();

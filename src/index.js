@@ -12,7 +12,7 @@ const port = 3000;
 
 app.engine(
     'hbs',
-      hbs.engine({
+    hbs.engine({
         extname: '.hbs',
     }),
 );

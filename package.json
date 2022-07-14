@@ -7,7 +7,8 @@
     "beautiful": "prettier --single-quote --trailing-comma all --tab-width 4 --write src/**/*.{js,json,scss}",
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch src/resourses/scss/ -o src/public/css/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,6 @@
     "url": "https://github.com/NguyenTrongNhat2001/Blog_F8/issues"
   },
   "homepage": "https://github.com/NguyenTrongNhat2001/Blog_F8#readme",
-  
   "lint-staged": {
     "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
   },
@@ -41,6 +41,6 @@
     "lint-staged": "^13.0.3",
     "morgan": "^1.10.0",
     "node-sass": "^7.0.1",
-    "prettier": "^2.7.1"
+    "prettier": "2.7.1"
   }
 }

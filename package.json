@@ -24,7 +24,7 @@
   "homepage": "https://github.com/NguyenTrongNhat2001/Blog_F8#readme",
   
   "lint-staged": {
-    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+    "src/**/*.{js,json,scss}": ["prettier","--single-quote", "--trailing-comma all", "--tab-width 4 ","--write"]
   },
   "husky": {
     "hooks": {

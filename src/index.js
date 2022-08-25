@@ -6,7 +6,7 @@ const hbs = require('express-handlebars');
 const route = require('./Routes');
 const db = require('./config/db');
 const app = express();
-const port = port = Process.env.PORT || 3000 ;
+const port = process.env.PORT || 3000 ;
 //http logger
 //app.use(morgan('combined'))
 //Template engine

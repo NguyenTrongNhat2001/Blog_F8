@@ -38,6 +38,5 @@ app.post('/search', (req, res) => {
   res.render('search');
 });
 */
-app.listen(process.env.PORT, () => {
-    console.log(`App listening on port ${port}`);
+app.listen(process.env.PORT, function(){
 });

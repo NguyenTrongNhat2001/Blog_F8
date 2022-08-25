@@ -6,7 +6,7 @@ const hbs = require('express-handlebars');
 const route = require('./Routes');
 const db = require('./config/db');
 const app = express();
-const port = 3000;
+const port = port = Process.env.PORT || 3000 ;
 //http logger
 //app.use(morgan('combined'))
 //Template engine
@@ -38,5 +38,6 @@ app.post('/search', (req, res) => {
   res.render('search');
 });
 */
-app.listen(process.env.PORT, function(){
+app.listen(port, function(){
+    console.log("server listening to port "+port);
 });

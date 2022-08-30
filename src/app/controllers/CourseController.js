@@ -25,7 +25,7 @@ class CourseController {
        fromData.image = `https://img.youtube.com/vi/${fromData.videoId}/sddefault.jpg`
        const course = new Course(fromData);
        course.save()
-       .then(()=> res.redirect('/'))
+       .then(()=> res.redirect('/me/stored/courses'))
        .catch(error =>{
 
        });
@@ -56,6 +56,16 @@ class CourseController {
         .then(()=> res.redirect('back'))
         .catch(next)
     }
+
+    //[delete] /courses/:id/force
+
+    forceDestroy(req, res, next)
+    {
+        Course.deleteOne({_id: req.params.id})
+        .then(()=> res.redirect('back'))
+        .catch(next)
+    }
+
     //[patch] /courses/:id/restore
     restore(req, res, next)
     {

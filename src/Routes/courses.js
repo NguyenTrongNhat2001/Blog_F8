@@ -10,6 +10,8 @@ router.put('/:id', CourseController.update);
 router.patch('/:id/restore', CourseController.restore);
 
 router.delete('/:id', CourseController.destroy);
+router.delete('/:id/force', CourseController.forceDestroy);
+
 
 router.get('/:slug', CourseController.show);
 
